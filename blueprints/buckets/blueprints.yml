@@ -1,0 +1,6 @@
+blueprints:
+  - stackname: 'builds-stack'
+    Capabilities: 'CAPABILITY_IAM'
+    template: 'buckets.template'
+    parameters:
+      BucketName: 'builds-bucket'

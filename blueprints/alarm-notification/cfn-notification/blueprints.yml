@@ -1,0 +1,14 @@
+blueprints:
+
+  - stackname: 'alarmnotification-prowl-lambda-stack'
+    template: 'lambda.template'
+    Capabilities: 'CAPABILITY_IAM'
+    vars:
+      Bucket: 'builds-bucket'
+      Key: 'lambda/alarm_notification_prowl_{tstamp}.zip'
+    parameters:
+      S3Bucket: '{var:Bucket}'
+      S3Key: '{var:Key}'
+      ProwlApiKey: '{env:PROWL_API_KEY}'
+    before:
+      - 'bash zip-and-upload-to-s3.sh s3://{var:Bucket}/{var:Key}'

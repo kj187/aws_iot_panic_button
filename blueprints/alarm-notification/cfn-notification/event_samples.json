@@ -1,0 +1,23 @@
+{
+  "Records": [
+    {
+      "EventSource": "aws:sns",
+      "EventVersion": "1.0",
+      "EventSubscriptionArn": "12345",
+      "Sns": {
+        "Type": "Notification",
+        "MessageId": "26ec4de9-12f5-53c7-b1c0-1dc454d11cd9",
+        "TopicArn": "1234",
+        "Subject": "This is a subject",
+        "Message": "{\"message\":\"Just a test\"}",
+        "Timestamp": "2016-08-16T16:48:36.182Z",
+        "SignatureVersion": "1",
+        "Signature": "1234",
+        "SigningCertUrl": "https://sns.eu-west-1.amazonaws.com/SimpleNotificationService-1234.pem",
+        "UnsubscribeUrl": "https://sns.eu-west-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=1234",
+        "MessageAttributes": {
+        }
+      }
+    }
+  ]
+}
