@@ -1,6 +1,6 @@
 blueprints:
-  - stackname: 'builds-stack'
+  - stackname: 'iotbtn-20-bucket-stack'
     Capabilities: 'CAPABILITY_IAM'
     template: 'buckets.template'
     parameters:
-      BucketName: 'builds-bucket'
+      BucketName: 'aws-iot-panic-button-builds-bucket'

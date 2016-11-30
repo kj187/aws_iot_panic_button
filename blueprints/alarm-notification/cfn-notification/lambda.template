@@ -38,13 +38,21 @@
               "Statement": [
                 {
                   "Effect": "Allow",
-                  "Action": ["logs:CreateLogGroup","logs:CreateLogStream","logs:PutLogEvents"],
+                  "Action": [
+                    "logs:CreateLogGroup",
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents"
+                  ],
                   "Resource": "arn:aws:logs:*:*:*"
                 },
                 {
                   "Effect": "Allow",
-                  "Action": [ "ec2:CreateNetworkInterface", "ec2:DescribeNetworkInterfaces", "ec2:DeleteNetworkInterface" ],
-                  "Resource": "*"
+                  "Action": [
+                    "s3:GetObject",
+                    "s3:PutObject",
+                    "s3:PutObjectAcl"
+                  ],
+                  "Resource": "arn:aws:s3:::*"
                 }
               ]
             }
@@ -65,7 +73,7 @@
         "Timeout": "300",
         "Role": { "Fn::GetAtt" : ["AlarmNotificationProwlLambdaExecutionRole", "Arn"] },
         "Environment": {
-          "Variables" : { "PROWL_API_KEY": "{Ref:ProwlApiKey}" }
+          "Variables" : { "API_KEY": "{Ref:ProwlApiKey}" }
         }
       }
     },

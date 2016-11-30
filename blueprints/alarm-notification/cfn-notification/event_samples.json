@@ -3,18 +3,18 @@
     {
       "EventSource": "aws:sns",
       "EventVersion": "1.0",
-      "EventSubscriptionArn": "12345",
+      "EventSubscriptionArn": "arn:aws:sns:eu-west-1:689154503867:iotbtn-alarm-notification:82f0e25b-a5de-4c15-9a31-84d0d025e9d5",
       "Sns": {
         "Type": "Notification",
-        "MessageId": "26ec4de9-12f5-53c7-b1c0-1dc454d11cd9",
-        "TopicArn": "1234",
-        "Subject": "This is a subject",
-        "Message": "{\"message\":\"Just a test\"}",
-        "Timestamp": "2016-08-16T16:48:36.182Z",
+        "MessageId": "e19f9327-2e29-51d3-af88-c39e188db134",
+        "TopicArn": "arn:aws:sns:eu-west-1:689154503867:iotbtn-alarm-notification",
+        "Subject": null,
+        "Message": "{\"serialNumber\": \"G030JF0504138W3A\", \"batteryVoltage\": \"1641mV\", \"clickType\": \"SINGLE\"}",
+        "Timestamp": "2016-11-30T20:19:48.628Z",
         "SignatureVersion": "1",
-        "Signature": "1234",
-        "SigningCertUrl": "https://sns.eu-west-1.amazonaws.com/SimpleNotificationService-1234.pem",
-        "UnsubscribeUrl": "https://sns.eu-west-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=1234",
+        "Signature": "adWt1AS4fqP6R8/IZFd96RQhMKuDdLH5ykspLsaXD+z3jCAA/hFU8QM/5tdc6BbX4swlnrEMKFR56P65mCsdNs2KMx3q89lj+ms6C4etmCvmSLdiUD56iaXRqSk8ERxlEpTI/ypHI9HlNQjeZUNh2IwZ3aFIKRgG7t6y7tL2j+YoV/c5nHwSO6kmDRPIL6raJRCIDTBv8rXy1MyQ8rmmW3hdtkzPUX7ATVBGY5OWeeCi7fJhWelggRYKPDpTFqxUR7zoYX5joy/xXqBGl7+l9v6yTWJCa2+i1oFhktI/dvwzBPlvd6nQhRo3f1NzEixd73YNZPm1hLCmaOoAMGplpw==",
+        "SigningCertUrl": "https://sns.eu-west-1.amazonaws.com/SimpleNotificationService-b95095beb82e8f6a046b3aafc7f4149a.pem",
+        "UnsubscribeUrl": "https://sns.eu-west-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:eu-west-1:689154503867:iotbtn-alarm-notification:82f0e25b-a5de-4c15-9a31-84d0d025e9d5",
         "MessageAttributes": {
         }
       }

@@ -1,0 +1,11 @@
+blueprints:
+  - stackname: 'iotbtn-40-IoT-button'
+    Capabilities: 'CAPABILITY_IAM'
+    template: 'iot-button.template'
+    parameters:
+      IoTButtonDSN: '{env:IOT_BUTTON_DSN}'
+      CertificateARN: '{env:CERTIFICATION_ARN}'
+      LambdaARN: '{output:iotbtn-30-alarmnotification-prowl-lambda-stack:AlarmNotificationProwlLambdaArn}'
+      SNSTopicName: 'iotbtn-alarm-notification'
+      SNSTopicRoleName: 'iotbtn-AlarmNotificationRole'
+      EmailAddress: '{env:IOT_EMAIL}'

@@ -1,11 +1,11 @@
 blueprints:
 
-  - stackname: 'alarmnotification-prowl-lambda-stack'
+  - stackname: 'iotbtn-30-alarmnotification-prowl-lambda-stack'
     template: 'lambda.template'
     Capabilities: 'CAPABILITY_IAM'
     vars:
-      Bucket: 'builds-bucket'
-      Key: 'lambda/alarm_notification_prowl_{tstamp}.zip'
+      Bucket: '{output:iotbtn-20-bucket-stack:BucketName}'
+      Key: 'lambda_alarm_notification_prowl_{tstamp}.zip'
     parameters:
       S3Bucket: '{var:Bucket}'
       S3Key: '{var:Key}'

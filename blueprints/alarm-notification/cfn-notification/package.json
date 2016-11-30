@@ -4,7 +4,7 @@
   "description": "Alarm notification",
   "main": "function.js",
   "scripts": {
-    "dev": "./node_modules/lambda-local/bin/lambda-local -l function.js -h handler -e event_samples.json"
+    "dev": "node_modules/.bin/lambda-local -l function.js -h handler -e event_samples.json"
   },
   "dependencies": {
     "node-prowl": "^0.1.7"
